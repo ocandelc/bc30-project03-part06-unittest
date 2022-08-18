@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "0d4d39a3-f592-4591-972d-e4b1b76a4f74",
+		"name": "BC30-Project02-Bank-microservice-03-Operation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22592653"
+	},
+	"item": [
+		{
+			"name": "Endpoint operation",
+			"item": [
+				{
+					"name": "01-create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"name\" : \"Corriente\", \"description\" : \"Cuenta Corriente\" , \"ruleMoveState\" : \"0\", \"ruleMoveNumber\" : \"\", \"state\" : \"1\", \"auditUserCreateName\" : \"oecandela\", \"auditUserCreateDate\" : \"{{currentDate}}\", \"auditUserCreateIp\" : \"192.168.1.1\", \"auditUserUpdateName\" : \"\", \"audituserUpdateDate\" : null, \"auditUserUpdateIp\" : \"\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/productbills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productbills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/passiveoperations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"passiveoperations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readByCodeOperation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8093/api/passiveoperations/findByCodePassiveOperation/PO-0000000001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8093",
+							"path": [
+								"api",
+								"passiveoperations",
+								"findByCodePassiveOperation",
+								"PO-0000000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/productbills/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productbills",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const dateNow= new Date();\r",
+									"pm.environment.set('currentDate', dateNow.toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/productbills/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"productbills",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
