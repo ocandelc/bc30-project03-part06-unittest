@@ -36,7 +36,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/api/productbills",
+							"raw": "http://localhost:8081/api/location",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -44,7 +44,7 @@
 							"port": "8081",
 							"path": [
 								"api",
-								"productbills"
+								"location"
 							]
 						}
 					},
@@ -56,7 +56,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8094/api/locations",
+							"raw": "http://localhost:8094/api/location",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -64,7 +64,7 @@
 							"port": "8094",
 							"path": [
 								"api",
-								"locations"
+								"location"
 							]
 						}
 					},
@@ -76,7 +76,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8094/api/locations/readByCodeLocation/L-0000000001",
+							"raw": "http://localhost:8094/api/location/readByCodeLocation/L-0000000001",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -84,7 +84,7 @@
 							"port": "8094",
 							"path": [
 								"api",
-								"locations",
+								"location",
 								"readByCodeLocation",
 								"L-0000000001"
 							]
@@ -119,7 +119,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/api/productbills/2",
+							"raw": "http://localhost:8081/api/location/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -127,7 +127,7 @@
 							"port": "8081",
 							"path": [
 								"api",
-								"productbills",
+								"location",
 								"2"
 							]
 						}
@@ -161,7 +161,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/api/productbills/2",
+							"raw": "http://localhost:8081/api/location/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -169,7 +169,7 @@
 							"port": "8081",
 							"path": [
 								"api",
-								"productbills",
+								"location",
 								"2"
 							]
 						}
