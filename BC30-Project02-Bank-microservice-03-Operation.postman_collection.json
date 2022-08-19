@@ -28,7 +28,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"name\" : \"Corriente\", \"description\" : \"Cuenta Corriente\" , \"ruleMoveState\" : \"0\", \"ruleMoveNumber\" : \"\", \"state\" : \"1\", \"auditUserCreateName\" : \"oecandela\", \"auditUserCreateDate\" : \"{{currentDate}}\", \"auditUserCreateIp\" : \"192.168.1.1\", \"auditUserUpdateName\" : \"\", \"audituserUpdateDate\" : null, \"auditUserUpdateIp\" : \"\"}",
+							"raw": "{\r\n    \"codeOperationPassive\" : \"OP-0000000003\",\r\n    \"name\" : \"prueba\",\r\n    \"description\" : \"prueba\",\r\n    \"operationDate\" : {{currentDate}},\r\n    \"principalBalance\" : 0.0,\r\n    \"balanceCommission\" : 0.0,\r\n    \"balanceCurrent\" : 0.0,\r\n    \"balanceMove\" : 0.0,\r\n    \"balanceNew\" : 0.0,\r\n    \"state\" : \"1\",\r\n    \"codeOperationType\" : \"OT-0000000001\",    \r\n    \"codeProduct\" : \"P-0000000001\"    \r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -161,12 +161,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/api/operationPassive/2",
+							"raw": "http://localhost:8093/api/operationPassive/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8081",
+							"port": "8093",
 							"path": [
 								"api",
 								"operationPassive",
