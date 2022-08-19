@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b0bbc684-daed-4e9f-a8e5-fe52a060ec44",
+		"_postman_id": "dab45646-e6e7-4c67-bdf8-381e0dcc96ac",
 		"name": "BC30-Project02-Bank-microservice-01-Product",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22634807"
+		"_exporter_id": "22592653"
 	},
 	"item": [
 		{
@@ -28,7 +28,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \"id\" : \"5\", \"codeProduct\" : \"PB-002\", \"name\" : \"Corriente\", \"status\" : \"Cuenta Corriente\" , \"auditUserInsertName\" : \"0\", \"auditUserInsertP\" : \"\", \"idProductSubType\" : \"1\", \"auditUserInsertDate\" : \"{{currentDate}}\"\r\n}\r\n",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"name\" : \"Corriente\", \"description\" : \"Cuenta Corriente\" , \"ruleMoveState\" : \"0\", \"ruleMoveNumber\" : \"\", \"state\" : \"1\", \"auditUserCreateName\" : \"oecandela\", \"auditUserCreateDate\" : \"{{currentDate}}\", \"auditUserCreateIp\" : \"192.168.1.1\", \"auditUserUpdateName\" : \"\", \"audituserUpdateDate\" : null, \"auditUserUpdateIp\" : \"\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -36,16 +36,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/products/create",
+							"raw": "http://localhost:8081/api/product",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8091",
+							"port": "8081",
 							"path": [
 								"api",
-								"products",
-								"create"
+								"product"
 							]
 						}
 					},
@@ -57,7 +56,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8091/api/products",
+							"raw": "http://localhost:8091/api/product",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -65,7 +64,7 @@
 							"port": "8091",
 							"path": [
 								"api",
-								"products"
+								"product"
 							]
 						}
 					},
@@ -90,7 +89,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \"id\" : \"5\", \"codeProduct\" : \"PB-002\", \"name\" : \"Corriente\", \"status\" : \"Otros\" , \"auditUserInsertName\" : \"0\", \"auditUserInsertP\" : \"\", \"idProductSubType\" : \"1\", \"auditUserInsertDate\" : \"{{currentDate}}\"\r\n}\r\n",
+							"raw": "{ \"id\" : 2, \"code\" : \"PB-002\", \"description\" : \"Cuenta Y Corriente\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -98,17 +97,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/products/update/5",
+							"raw": "http://localhost:8081/api/product/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8091",
+							"port": "8081",
 							"path": [
 								"api",
-								"products",
-								"update",
-								"5"
+								"product",
+								"2"
 							]
 						}
 					},
@@ -141,17 +139,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8091/api/products/delete/5",
+							"raw": "http://localhost:8081/api/product/2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8091",
+							"port": "8081",
 							"path": [
 								"api",
-								"products",
-								"delete",
-								"5"
+								"product",
+								"2"
 							]
 						}
 					},
