@@ -24,7 +24,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customers/create",
+							"raw": "http://localhost:8092/api/customer/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -32,7 +32,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"create"
 							]
 						}
@@ -60,7 +60,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customers/updateById/5",
+							"raw": "http://localhost:8092/api/customer/updateById/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -68,7 +68,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"updateById",
 								"5"
 							],
@@ -89,7 +89,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/customers",
+							"raw": "http://localhost:8092/api/customer",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -97,7 +97,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"customers"
+								"customer"
 							]
 						}
 					},
@@ -130,7 +130,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/customers/deleteById/5",
+							"raw": "http://localhost:8092/api/customer/deleteById/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -138,7 +138,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"customers",
+								"customer",
 								"deleteById",
 								"5"
 							]
@@ -166,7 +166,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/documents/create",
+							"raw": "http://localhost:8092/api/document/create",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -174,7 +174,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"documents",
+								"document",
 								"create"
 							]
 						}
@@ -187,7 +187,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/documents",
+							"raw": "http://localhost:8092/api/document",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -195,7 +195,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"documents"
+								"document"
 							]
 						}
 					},
@@ -216,7 +216,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/documents/updateById/4",
+							"raw": "http://localhost:8092/api/document/updateById/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -224,7 +224,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"documents",
+								"document",
 								"updateById",
 								"4"
 							],
@@ -257,7 +257,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8092/api/documents/deleteById/4",
+							"raw": "http://localhost:8092/api/document/deleteById/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -265,7 +265,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"documents",
+								"document",
 								"deleteById",
 								"4"
 							]
@@ -282,7 +282,29 @@
 					"name": "01-create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"id\" : 9,\r\n    \"name\" : \"Documento Ejemplo\",\r\n    \"description\" : \"EJEMPLO DE DOCUMENTO\",\r\n    \"state\" : \"1\",\r\n    \"codeDocumentType\" : \"DT-0000000009\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/documentType/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType",
+								"create"
+							]
+						}
 					},
 					"response": []
 				},
@@ -290,7 +312,19 @@
 					"name": "02-readAll",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/documentType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType"
+							]
+						}
 					},
 					"response": []
 				},
@@ -309,7 +343,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8092/api/documentTypes/updateById/9",
+							"raw": "http://localhost:8092/api/documentType/updateById/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -317,7 +351,7 @@
 							"port": "8092",
 							"path": [
 								"api",
-								"documentTypes",
+								"documentType",
 								"updateById",
 								"9"
 							]
@@ -328,8 +362,118 @@
 				{
 					"name": "04-delete",
 					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/documentType/deleteById/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"documentType",
+								"deleteById",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endpoint customer_type",
+			"item": [
+				{
+					"name": "01-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"CLIENTE PERSONAL REGULAR\",\r\n    \"description\" : \"CLIENTE PERSONAL REGULAR\",\r\n    \"state\" : \"1\",\r\n    \"codeCustomerType\" : \"CT-0000000005\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customerType/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customerType",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02-readAll",
+					"request": {
 						"method": "GET",
 						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "03-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"4\",\r\n    \"name\" : \"CLIENTE PERSONAL REGULAR MODIFICADO\",\r\n    \"description\" : \"CLIENTE PERSONAL REGULAR MODIFICADO\",\r\n    \"state\" : \"1\",\r\n    \"codeCustomerType\" : \"CT-0000000005\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8092/api/customerType/updateById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customerType",
+								"updateById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8092/api/customerType/deleteById/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8092",
+							"path": [
+								"api",
+								"customerType",
+								"deleteById",
+								"4"
+							]
+						}
 					},
 					"response": []
 				}
